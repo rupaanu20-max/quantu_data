@@ -2,31 +2,47 @@
   calculation = 'vc-relax'
   prefix = 'RuFeO3_2x1x1'
   outdir = '/home/abhunia.chy.iith/new_feruo_p/tmp'
-  pseudo_dir = '/home/abhunia.chy.iith/new_feruo_p/pseudo'
+  pseudo_dir = '/home/abhunia.chy.iith/new_feruo_p/pseudo
+  calculation = 'scf'
+  prefix = 'RuFeO3_2x1x1'
+  outdir = '/home/abhunia.chy.iith/cubic_feruo_p/tmp'
+  pseudo_dir = '/home/abhunia.chy.iith/cubic_feruo_p/pseudo'
   tstress = .true.
   tprnfor = .true.
 /
 
 &SYSTEM
+<<<<<<< HEAD
   ibrav = 4
   a = 10.65042
   c = 10.00000
+  ibrav = 0
   nat = 6
   ntyp = 3
   ecutwfc = 60
   ecutrho = 480
 
   occupations = 'smearing'
+<<<<<<< HEAD
   smearing = 'mp'
   degauss = 0.02
 
   nspin = 2
   starting_magnetization(1) = 0.3
   starting_magnetization(2) = 0.6
+=======
+  smearing = 'mv'
+  degauss = 0.03
+
+  nspin = 2
+  starting_magnetization(1) = 0.5
+  starting_magnetization(2) = 0.8
+>>>>>>> ff335f660ecd9e9ef771aae05378b9f36a366734
   starting_magnetization(3) = 0.0
 /
 
 &ELECTRONS
+<<<<<<< HEAD
   conv_thr = 1.0d-6
   mixing_beta = 0.2
 /
@@ -37,6 +53,13 @@
 
 &CELL
   cell_dynamics = 'bfgs'
+=======
+  conv_thr = 1.0d-8
+  mixing_beta = 0.1
+  mixing_mode = 'local-TF'
+  electron_maxstep = 300
+  diagonalization = 'cg'
+>>>>>>> ff335f660ecd9e9ef771aae05378b9f36a366734
 /
 
 ATOMIC_SPECIES
@@ -44,6 +67,14 @@ Ru 101.07 Ru.pbe-spn-kjpaw_psl.1.0.0.UPF
 Fe 55.845 Fe.pbe-spn-kjpaw_psl.1.0.0.UPF
 O  15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
 
+<<<<<<< HEAD
+=======
+CELL_PARAMETERS angstrom
+10.65042 0.0 0.0
+0.0 5.32521 0.0
+0.0 0.0 10.00000
+
+>>>>>>> ff335f660ecd9e9ef771aae05378b9f36a366734
 ATOMIC_POSITIONS crystal
 Ru 0.00000 0.00000 0.25000
 Fe 0.00000 0.00000 0.50000
@@ -53,5 +84,9 @@ Fe 0.50000 0.00000 0.50000
 O  0.50000 0.55828 0.75000
 
 K_POINTS automatic
+<<<<<<< HEAD
 3 6 4 0 0 0
+=======
+2 4 3 0 0 0
+>>>>>>> ff335f660ecd9e9ef771aae05378b9f36a366734
 

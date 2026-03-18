@@ -1,0 +1,24 @@
+==========================================
+SLURM_CLUSTER_NAME = paramseva
+SLURM_ARRAY_JOB_ID = 
+SLURM_ARRAY_TASK_ID = 
+SLURM_ARRAY_TASK_COUNT = 
+SLURM_ARRAY_TASK_MAX = 
+SLURM_ARRAY_TASK_MIN = 
+SLURM_JOB_ACCOUNT = iith
+SLURM_JOB_ID = 303801
+SLURM_JOB_NAME = rufe_relax.slurm
+SLURM_JOB_NODELIST = cn007
+SLURM_JOB_USER = abhunia.chy.iith
+SLURM_JOB_UID = 26810
+SLURM_JOB_PARTITION = standard
+SLURM_TASK_PID = 23268
+SLURM_SUBMIT_DIR = /home/abhunia.chy.iith/cubic_feruo_p
+SLURM_CPUS_ON_NODE = 1
+SLURM_NTASKS = 
+SLURM_TASK_PID = 23268
+==========================================
+/var/share/slurm/d/job303801/slurm_script: line 2: BATCH: command not found
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 303801.0 ON cn007 CANCELLED AT 2026-02-18T07:41:02 ***
+slurmstepd: error: *** JOB 303801 ON cn007 CANCELLED AT 2026-02-18T07:41:02 ***
