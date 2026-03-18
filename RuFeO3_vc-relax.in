@@ -1,0 +1,55 @@
+&CONTROL
+  calculation = 'scf'
+  prefix = 'RuFeO3_2x1x1'
+  outdir = '/home/abhunia.chy.iith/cubic_feruo_p/tmp'
+  pseudo_dir = '/home/abhunia.chy.iith/cubic_feruo_p/pseudo'
+  tstress = .true.
+  tprnfor = .true.
+/
+
+&SYSTEM
+  ibrav = 0
+  nat = 6
+  ntyp = 3
+  ecutwfc = 60
+  ecutrho = 480
+
+  occupations = 'smearing'
+  smearing = 'mv'
+  degauss = 0.03
+
+  nspin = 2
+  starting_magnetization(1) = 0.5
+  starting_magnetization(2) = 0.8
+  starting_magnetization(3) = 0.0
+/
+
+&ELECTRONS
+  conv_thr = 1.0d-8
+  mixing_beta = 0.1
+  mixing_mode = 'local-TF'
+  electron_maxstep = 300
+  diagonalization = 'cg'
+/
+
+ATOMIC_SPECIES
+Ru 101.07 Ru.pbe-spn-kjpaw_psl.1.0.0.UPF
+Fe 55.845 Fe.pbe-spn-kjpaw_psl.1.0.0.UPF
+O  15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
+
+CELL_PARAMETERS angstrom
+10.65042 0.0 0.0
+0.0 5.32521 0.0
+0.0 0.0 10.00000
+
+ATOMIC_POSITIONS crystal
+Ru 0.00000 0.00000 0.25000
+Fe 0.00000 0.00000 0.50000
+O  0.00000 0.55828 0.75000
+Ru 0.50000 0.00000 0.25000
+Fe 0.50000 0.00000 0.50000
+O  0.50000 0.55828 0.75000
+
+K_POINTS automatic
+2 4 3 0 0 0
+
